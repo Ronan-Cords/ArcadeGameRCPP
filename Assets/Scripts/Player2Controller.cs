@@ -5,9 +5,12 @@ using UnityEngine;
 public class Player2Controller : MonoBehaviour
 {
     public float speed = 10;
+
+    public Rigidbody Player2Rb;
+    public float JumpForce;
     void Start()
     {
-        
+        Player2Rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -21,5 +24,15 @@ public class Player2Controller : MonoBehaviour
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
+
+        if(Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            PlayerJump();
+        }
+    }
+
+    public void PlayerJump()
+    {
+        Player2Rb.AddForce(0, JumpForce, 0, ForceMode.Impulse);
     }
 }
