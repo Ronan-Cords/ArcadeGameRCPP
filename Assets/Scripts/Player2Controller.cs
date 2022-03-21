@@ -8,6 +8,8 @@ public class Player2Controller : MonoBehaviour
 
     public Rigidbody Player2Rb;
     public float JumpForce;
+    public bool IsOnGround;
+
     void Start()
     {
         Player2Rb = GetComponent<Rigidbody>();
@@ -25,14 +27,20 @@ public class Player2Controller : MonoBehaviour
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
 
-        if(Input.GetKeyUp(KeyCode.UpArrow))
+        if(Input.GetKeyUp(KeyCode.UpArrow) && IsOnGround == true)
         {
             PlayerJump();
+            IsOnGround = false;
         }
     }
 
     public void PlayerJump()
     {
         Player2Rb.AddForce(0, JumpForce, 0, ForceMode.Impulse);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        IsOnGround = true;
     }
 }

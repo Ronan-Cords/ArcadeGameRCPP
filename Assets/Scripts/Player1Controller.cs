@@ -8,7 +8,7 @@ public class Player1Controller : MonoBehaviour
 
     public Rigidbody Player1Rb;
     public float JumpForce;
-
+    public bool IsOnGround;
 
     void Start()
     {
@@ -27,9 +27,10 @@ public class Player1Controller : MonoBehaviour
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
 
-        if (Input.GetKeyUp(KeyCode.W))
+        if (Input.GetKeyUp(KeyCode.W) && IsOnGround == true)
         {
             PlayerJump();
+            IsOnGround = false;
         }
     }
 
@@ -38,5 +39,9 @@ public class Player1Controller : MonoBehaviour
         Player1Rb.AddForce(0, JumpForce, 0, ForceMode.Impulse);
     }
 
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        IsOnGround = true;
+    }
+
 }
