@@ -8,8 +8,10 @@ public class Player2Controller : MonoBehaviour
     public float speed = 10;
 
     public Rigidbody Player2Rb;
-    public float JumpForce;
+    public float JumpForce = 10;
     public bool IsOnGround;
+
+    public float JumpBoostDuration = 3;
 
 
     void Start()
@@ -30,10 +32,17 @@ public class Player2Controller : MonoBehaviour
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
 
-        if(Input.GetKeyUp(KeyCode.UpArrow) && IsOnGround == true)
+        if(Input.GetKey(KeyCode.UpArrow) && IsOnGround == true)
         {
             PlayerJump();
             IsOnGround = false;
+        }
+
+        if (Input.GetKey(KeyCode.Alpha5))
+        {
+            JumpForce = 20;
+            StartCoroutine("JumpDuration", JumpBoostDuration);
+            
         }
     }
 
@@ -47,6 +56,10 @@ public class Player2Controller : MonoBehaviour
         IsOnGround = true;
     }
 
- 
+    IEnumerator JumpDuration(int JumpBoostDuration)
+    {
+        yield return new WaitForSeconds(JumpBoostDuration);
+        JumpForce = 10;
+    }
 
 }

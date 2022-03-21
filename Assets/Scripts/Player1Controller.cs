@@ -7,9 +7,9 @@ public class Player1Controller : MonoBehaviour
     public float speed = 10;
 
     public Rigidbody Player1Rb;
-    public float JumpForce;
+    public float JumpForce = 10;
     public bool IsOnGround;
-    public bool sprinting = false;
+    public bool ReadyToSprint;
     public int SprintDuration = 3;
     
 
@@ -36,18 +36,17 @@ public class Player1Controller : MonoBehaviour
             IsOnGround = false;
         }
 
-        if (Input.GetKeyUp(KeyCode.V))
+        if (Input.GetKey(KeyCode.V))
         {
-            if (sprinting == false)
+            if (ReadyToSprint == true)
             {
                 speed = 20;
-                sprinting = true;
-                //call coroutine to allow sprinting for a few seconds
-
+                ReadyToSprint = false;
+                StartCoroutine("SprintLength", SprintDuration);
             }
-            speed = 10;
-            sprinting = false;
+            ReadyToSprint = true;
         }
+
     }
 
     public void PlayerJump()
@@ -58,6 +57,13 @@ public class Player1Controller : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         IsOnGround = true;
+    }
+
+    IEnumerator SprintLength(int SprintDuration)
+    {
+        yield return new WaitForSeconds(SprintDuration);
+        speed = 10;
+        
     }
 
 

@@ -3359,6 +3359,7 @@ MonoBehaviour:
   Player2Rb: {fileID: 1599675867}
   JumpForce: 10
   IsOnGround: 0
+  JumpBoostDuration: 3
 --- !u!65 &1599675869
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4248,6 +4249,8 @@ MonoBehaviour:
   Player1Rb: {fileID: 2026010758}
   JumpForce: 10
   IsOnGround: 1
+  ReadyToSprint: 1
+  SprintDuration: 3
 --- !u!65 &2026010760
 BoxCollider:
   m_ObjectHideFlags: 0
