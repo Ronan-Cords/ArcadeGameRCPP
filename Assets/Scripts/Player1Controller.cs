@@ -9,6 +9,9 @@ public class Player1Controller : MonoBehaviour
     public Rigidbody Player1Rb;
     public float JumpForce;
     public bool IsOnGround;
+    public bool sprinting = false;
+    public int SprintDuration = 3;
+    
 
     void Start()
     {
@@ -32,6 +35,19 @@ public class Player1Controller : MonoBehaviour
             PlayerJump();
             IsOnGround = false;
         }
+
+        if (Input.GetKeyUp(KeyCode.V))
+        {
+            if (sprinting == false)
+            {
+                speed = 20;
+                sprinting = true;
+                //call coroutine to allow sprinting for a few seconds
+
+            }
+            speed = 10;
+            sprinting = false;
+        }
     }
 
     public void PlayerJump()
@@ -43,5 +59,12 @@ public class Player1Controller : MonoBehaviour
     {
         IsOnGround = true;
     }
+
+
+
+    
+    
+        
+    
 
 }

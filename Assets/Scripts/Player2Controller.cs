@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player2Controller : MonoBehaviour
 {
@@ -10,9 +11,11 @@ public class Player2Controller : MonoBehaviour
     public float JumpForce;
     public bool IsOnGround;
 
+
     void Start()
     {
         Player2Rb = GetComponent<Rigidbody>();
+
     }
 
     void Update()
@@ -43,4 +46,7 @@ public class Player2Controller : MonoBehaviour
     {
         IsOnGround = true;
     }
+
+ 
+
 }

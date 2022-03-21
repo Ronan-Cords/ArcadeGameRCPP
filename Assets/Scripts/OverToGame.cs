@@ -28,6 +28,6 @@ public class OverToGame : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 }
