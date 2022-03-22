@@ -30,7 +30,7 @@ public class Player1Controller : MonoBehaviour
             transform.Translate(Vector3.left * Time.deltaTime * speed);
         }
 
-        if (Input.GetKeyUp(KeyCode.W) && IsOnGround == true)
+        if (Input.GetKeyDown(KeyCode.W) && IsOnGround == true)
         {
             PlayerJump();
             IsOnGround = false;
