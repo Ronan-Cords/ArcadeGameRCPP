@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class Player1Scoring : MonoBehaviour
+public class Player2Scoring : MonoBehaviour
 {
-    private int player1ScoreToAdd;
-    public int Player1score;
-    public TextMeshProUGUI Player1scoreText;
+    private int player2ScoreToAdd;
+    public int Player2score;
+    //public TextMeshProUGUI Player2scoreText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,22 +17,24 @@ public class Player1Scoring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
+
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player1Goal"))
+        if (other.CompareTag("Player1"))
         {
-            UpdatePlayer1Score(player1ScoreToAdd);
-            Debug.Log("Dog Scored");
+            //UpdatePlayer2Score(player2ScoreToAdd);
+            Debug.Log("Cat Scored");
         }
-       
+
     }
 
-    public void UpdatePlayer1Score(int player1ScoreToAdd)
+    /*public void UpdatePlayer1Score(int player1ScoreToAdd)
     {
         Player1score = player1ScoreToAdd + 1;
         Player1scoreText.text = "Dog Score: " + Player1score;
 
     }
+    */
 }
