@@ -27,6 +27,6 @@ public class StartPlay : MonoBehaviour
 
     public void LoadGameStart()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }
