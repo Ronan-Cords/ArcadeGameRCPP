@@ -34,7 +34,7 @@ public class Player2Scoring : MonoBehaviour
     public void UpdatePlayer2Score(int player2ScoreToAdd)
     {
         Player2score = player2ScoreToAdd + 1;
-        Player2scoreText.text = "Dog Score: " + Player2score;
+        Player2scoreText.text = "Cat Score: " + Player2score;
 
     }
     

@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player2score: 0
-  Player2scoreText: {fileID: 0}
+  Player2scoreText: {fileID: 90523411}
 --- !u!1 &211069771
 GameObject:
   m_ObjectHideFlags: 0
