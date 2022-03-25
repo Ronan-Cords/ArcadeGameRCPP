@@ -8,6 +8,8 @@ public class Player1Scoring : MonoBehaviour
     private int player1ScoreToAdd;
     public int Player1score;
     public TextMeshProUGUI Player1scoreText;
+
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,6 @@ public class Player1Scoring : MonoBehaviour
     {
         Player1score = player1ScoreToAdd + 1;
         Player1scoreText.text = "Dog Score: " + Player1score;
-
+        
     }
 }
