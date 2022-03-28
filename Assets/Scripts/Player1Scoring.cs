@@ -35,7 +35,7 @@ public class Player1Scoring : MonoBehaviour
     public void UpdatePlayer1Score(int player1ScoreToAdd)
     {
         Player1score = player1ScoreToAdd + 1;
-        Player1scoreText.text = "Dog Score: " + Player1score;
+        Player1scoreText.text = "Cobalt Canine Score: " + Player1score;
         SceneManager.LoadScene(8);
     }
 }

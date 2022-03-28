@@ -35,7 +35,7 @@ public class Player2Scoring : MonoBehaviour
     public void UpdatePlayer2Score(int player2ScoreToAdd)
     {
         Player2score = player2ScoreToAdd + 1;
-        Player2scoreText.text = "Cat Score: " + Player2score;
+        Player2scoreText.text = "Fuchsia Feline Score: " + Player2score;
         SceneManager.LoadScene(10);
     }
     
