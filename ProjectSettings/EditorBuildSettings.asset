@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/stage 5.unity
     guid: e34c5678ac6fd6a4b8bb539249396967
+  - enabled: 1
+    path: Assets/Scenes/PostDogScore.unity
+    guid: 383ee3fdbc8108e469b83529fad0c256
+  - enabled: 1
+    path: Assets/Scenes/LevelSelection.unity
+    guid: 58fc71ba43d87da41ba1a3aaf82af183
+  - enabled: 1
+    path: Assets/Scenes/PostCatScore.unity
+    guid: 37c1c43d27a1247469b3c95b60ead4e1
   m_configObjects: {}

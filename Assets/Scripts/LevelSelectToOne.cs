@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartPlay : MonoBehaviour
+public class LevelSelectToOne : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,19 +14,19 @@ public class StartPlay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space))
         {
-            LoadGameStart();
+            ToLevel1();
         }
 
-        if(Input.GetKeyUp(KeyCode.Alpha4))
+        if(Input.GetKey(KeyCode.Alpha4))
         {
-            LoadGameStart();
+            ToLevel1();
         }
     }
 
-    public void LoadGameStart()
+    public void ToLevel1()
     {
-        SceneManager.LoadScene(9);
+        SceneManager.LoadScene(3);
     }
 }

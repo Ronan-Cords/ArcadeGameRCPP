@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player2Scoring : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class Player2Scoring : MonoBehaviour
     {
         Player2score = player2ScoreToAdd + 1;
         Player2scoreText.text = "Cat Score: " + Player2score;
-
+        SceneManager.LoadScene(10);
     }
     
 }

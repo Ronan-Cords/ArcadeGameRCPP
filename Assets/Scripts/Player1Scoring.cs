@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player1Scoring : MonoBehaviour
 {
@@ -35,6 +36,6 @@ public class Player1Scoring : MonoBehaviour
     {
         Player1score = player1ScoreToAdd + 1;
         Player1scoreText.text = "Dog Score: " + Player1score;
-        
+        SceneManager.LoadScene(8);
     }
 }
