@@ -47,6 +47,21 @@ public class Player1Controller : MonoBehaviour
             ReadyToSprint = true;
         }
 
+        if (transform.position.y > 15)
+        {
+            transform.position = new Vector3(transform.position.x, 15, transform.position.z);
+        }
+
+        if (transform.position.x < -27)
+        {
+            transform.position = new Vector3(-27, transform.position.y, transform.position.z);
+        }
+
+        if (transform.position.x > 27)
+        {
+            transform.position = new Vector3(27, transform.position.y, transform.position.z);
+        }
+
     }
 
     public void PlayerJump()
